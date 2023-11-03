@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+8ab44c018917ec5b0028e1176dd355aca3eac0aa refs/remotes/origin/java-library
+159e88259bc9e8ddc4ff593be235a88b70a58367 refs/remotes/origin/main
+7e8488e35966dfbac9354478cfe0d9e8460a8b1a refs/remotes/origin/sgoudham-patch-1
+652cfc51c0f70dec80a5c78c273f8fcacb3a6ad2 refs/tags/v0.1.6
+^7450f6f9d800fa5b5f729cda6a1e940460c27a66

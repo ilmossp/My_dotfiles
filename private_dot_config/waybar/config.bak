@@ -1,0 +1,44 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // "height": 30, // Waybar height (to be removed for auto height)
+    "margin": "5 20 0 20",
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-right": ["tray","wireplumber","backlight","network","clock"],
+
+
+    //***************************
+    //*  Modules configuration  *
+    //***************************
+ 
+
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%H:%M} "
+    },
+
+"hyprland/workspaces": {
+    "persistent-workspaces": {
+             "eDP-1": [1,2,3,4,5], 
+       }
+},
+
+"backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""]
+},
+	"network": {
+	"format" : "{essid} {icon}",
+	"format-icons": ["","","",""]
+	},
+
+	"wireplumber": {
+		"format ": "{volume}% {icon}",
+		"format-icons": ["","",""] 
+	}
+
+}
