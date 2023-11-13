@@ -27,7 +27,12 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-  {
+ {
+  "karb94/neoscroll.nvim",
+  config = function ()
+    require('neoscroll').setup {}
+  end
+}, {
     'kaarmu/typst.vim',
     ft = 'typst',
     lazy = false,
@@ -76,23 +81,6 @@ require('lazy').setup({
   { "hrsh7th/cmp-buffer" },
   --ts autotag closing
   { "windwp/nvim-ts-autotag" },
-  {
-    "okuuva/auto-save.nvim",
-    cmd = "ASToggle",                         -- optional for lazy loading on command
-    event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
-    opts = {
-    },
-  },
-{
-  'nvimdev/dashboard-nvim',
-  event = 'VimEnter',
- config = function()
-    require('dashboard').setup {
-      -- config
-    }
-  end,
-  dependencies = { {'nvim-tree/nvim-web-devicons'}}
-},
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
   'nvim-tree/nvim-web-devicons',
