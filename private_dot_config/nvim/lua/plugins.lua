@@ -27,15 +27,47 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
- {
-  "karb94/neoscroll.nvim",
-  config = function ()
-    require('neoscroll').setup {}
-  end
-}, {
-    'kaarmu/typst.vim',
-    ft = 'typst',
-    lazy = false,
+  'github/copilot.vim',
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
+  },
+
+
+  {
+    "ray-x/go.nvim",
+    dependencies = { -- optional packages
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("go").setup()
+    end,
+    event = { "CmdlineEnter" },
+    ft = { "go", 'gomod' },
+    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+  },
+
+  {
+
+    "karb94/neoscroll.nvim",
+    config = function()
+      require('neoscroll').setup {}
+    end
+  }, {
+  'kaarmu/typst.vim',
+  ft = 'typst',
+  lazy = false,
+},
+  {
+    'ekickx/clipboard-image.nvim'
   },
   {
     "folke/zen-mode.nvim",
@@ -58,9 +90,9 @@ require('lazy').setup({
   config = function()
     require("neorg").setup {
       load = {
-        ["core.defaults"] = {},    -- Loads default behaviour
-        ["core.concealer"] = {},   -- Adds pretty icons to your documents
-        ["core.dirman"] = {        -- Manages Neorg workspaces
+        ["core.defaults"] = {},  -- Loads default behaviour
+        ["core.concealer"] = {}, -- Adds pretty icons to your documents
+        ["core.dirman"] = {      -- Manages Neorg workspaces
           config = {
             workspaces = {
               notes = "~/notes",
@@ -73,11 +105,11 @@ require('lazy').setup({
   end,
 },
   {
-  'stevearc/oil.nvim',
-  opts = {},
-  -- Optional dependencies
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-},
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
   { "hrsh7th/cmp-buffer" },
   --ts autotag closing
   { "windwp/nvim-ts-autotag" },
@@ -115,7 +147,13 @@ require('lazy').setup({
     'hrsh7th/nvim-cmp',
     dependencies = {
       -- Snippet Engine & its associated nvim-cmp source
-      'L3MON4D3/LuaSnip',
+      {
+	"L3MON4D3/LuaSnip",
+	-- follow latest release.
+	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!).
+	build = "make install_jsregexp"
+},
       'saadparwaiz1/cmp_luasnip',
 
       -- Adds LSP completion capabilities

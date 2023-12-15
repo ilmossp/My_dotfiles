@@ -48,3 +48,5 @@ vim.keymap.set('n','<leader>bcc','<Cmd>BufferClose<Cr>')
 vim.keymap.set('n','<leader>bcl','<Cmd>BufferCloseBuffersLeft<Cr>')
 --Zenmode
 vim.keymap.set('n','<leader>Z','<Cmd>ZenMode<Cr>')
+--Copilot
+vim.keymap.set('n','<C-J>','<Cmd>copilot#Accept<Cr>')

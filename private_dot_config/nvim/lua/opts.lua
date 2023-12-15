@@ -13,7 +13,9 @@ vim.o.mouse = 'a'
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.o.clipboard = 'unnamedplus'
-
+-- tabstop
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 -- Enable break indent
 vim.o.breakindent = true
 
@@ -61,4 +63,3 @@ vim.cmd([[augroup FormatAutogroup
   autocmd!
   autocmd BufWritePost * FormatWrite
 augroup END]])
-

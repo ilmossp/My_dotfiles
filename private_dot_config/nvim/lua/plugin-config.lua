@@ -128,7 +128,6 @@ local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
-
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -273,7 +272,7 @@ require("formatter").setup {
   -- Enable or disable logging
   logging = true,
   -- Set the log level
-  log_level = vim.log.levels.WARN,
+  -- log_level = vim.log.levels.WARN,
   -- All formatter configurations are opt-in
   filetype = {
     -- Formatter configurations for filetype "lua" go here
