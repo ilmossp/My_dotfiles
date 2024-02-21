@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export --path GOPATH:/home/ilyass/go
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_catppuccin_2F_fish_files:\x7e/\x2econfig/fish/themes/Catppuccin\x20Frappe\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Latte\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Macchiato\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Mocha\x2etheme
@@ -10,6 +11,7 @@ SETUVAR _fisher_pure_2D_fish_2F_pure_files:\x7e/\x2econfig/fish/functions/_pure_
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:pwd\x1egit\x1enewline\x1echaracter
 SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1evirtual_env\x1erustc\x1ejava
+SETUVAR --export export:\x1d
 SETUVAR fish_color_autosuggestion:6c7086
 SETUVAR fish_color_cancel:f38ba8
 SETUVAR fish_color_command:89b4fa

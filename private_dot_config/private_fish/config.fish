@@ -14,3 +14,15 @@ set -x PIPENV_IGNORE_VIRTUALENVS 1
 #cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
+
+# zoxide
+zoxide init fish | source

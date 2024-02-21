@@ -27,8 +27,7 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-  'github/copilot.vim',
-  {
+    {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
